@@ -17,8 +17,7 @@ jobs:
           path: ./package.json
       - name: Echo package.json
         run: echo ${{ steps.package.outputs.content }}
-
-      - uses: ./
-        id: package
-        with:
-          path: package.json
+      # - uses: ./
+      #   id: package
+      #   with:
+      #     path: package.json
