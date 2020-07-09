@@ -14,7 +14,3 @@ steps:
   - name: Echo package.json
     run: echo ${{ steps.package.outputs.content }}
 ```
-
-## License
-
-MIT
