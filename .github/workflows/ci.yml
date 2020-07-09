@@ -10,6 +10,14 @@ jobs:
         run: |
           npm ci
           npm run build
+      - name: Read package.json
+        id: package
+        uses: juliangruber/read-file-action@v1
+        with:
+          path: ./package.json
+      - name: Echo package.json
+        run: echo ${{ steps.package.outputs.content }}
+
       - uses: ./
         id: package
         with:
