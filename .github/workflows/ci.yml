@@ -1,25 +1,21 @@
 name: CI
+
 on:
   push:
     branches: [test]
+
 jobs:
-  build:
+  read-file:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-      # - name: Build
-      #   run: |
-      #     npm ci
-      #     npm run build
+
       - name: Read file.txt
         id: package
         uses: juliangruber/read-file-action@v1
         with:
           path: ./file.txt
+
       - name: Echo file.txt
         run: echo ${{ steps.package.outputs.content }}
-      # - uses: ./
-      #   id: package
-      #   with:
-      #     path: package.json
