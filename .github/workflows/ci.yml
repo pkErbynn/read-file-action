@@ -8,10 +8,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-      - name: Build
-        run: |
-          npm ci
-          npm run build
+      # - name: Build
+      #   run: |
+      #     npm ci
+      #     npm run build
       - name: Read file.txt
         id: package
         uses: juliangruber/read-file-action@v1
