@@ -1,3 +1,1 @@
-Content inside file...
-next line 2
-next line 3
+Content inside file....next line 2....next line 3
